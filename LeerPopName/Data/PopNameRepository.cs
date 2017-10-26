@@ -9,10 +9,16 @@ namespace LeerPopName.Data
 {
     public class PopNameRepository : BaseRepository, ICrud<PopName>
     {
+        IObjectContainer db;
         /// <summary>
         /// 
         /// </summary>
         /// <param name="person"></param>
+        /// 
+        public PopNameRepository() {
+            db = Db4oFactory.OpenFile(Path);
+        }
+
         public void Add(PopName person)
         {
 
@@ -22,6 +28,17 @@ namespace LeerPopName.Data
                 db.Commit();
                 db.Close();
             }
+        }
+
+        public void AddParallel(PopName person)
+        {
+                db.Store(person);
+        }
+
+        public void AddCommit()
+        {
+                db.Commit();
+                db.Close();
         }
         /// <summary>
         /// 

@@ -61,7 +61,7 @@
   <ItemGroup>
     <Compile Include="Data\BaseRepository.cs" />
     <Compile Include="Data\ICrud.cs" />
-    <Compile Include="Data\PopRepository.cs" />
+    <Compile Include="Data\PopNameRepository.cs" />
     <Compile Include="PopName.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

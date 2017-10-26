@@ -17,7 +17,7 @@ namespace LeerPopName
         private int m_count;
 
         // Properties:
-        public string RowGuid { get; set; }
+        public int RowGuid { get; set; }
         internal string Name { get { return m_name; } set { m_name = value; } }
         internal NameGender Gender { get { return m_gender; } set { m_gender = value; } }
         internal string State { get { return m_state; } set { m_state = value; } }
