@@ -18,7 +18,10 @@ namespace LeerPopName.Data
         public PopNameRepository() {
             db = Db4oFactory.OpenFile(Path);
         }
-
+        public PopNameRepository(bool res)
+        {
+            
+        }
         public void Add(PopName person)
         {
 
